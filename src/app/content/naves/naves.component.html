@@ -1,0 +1,150 @@
+<div class="container">
+    <section>
+        <div class="jumbotron" 
+            [class.formActive]="viewForm"
+            [class.formNoActive]="!viewForm"
+        >
+            <div class="container">
+                <div class="center" >
+                    <h5>{{ formName }}</h5>
+                    <hr>
+                    
+                    <div class="input-group mb-3">
+                        <input 
+                            type="text" 
+                            class="form-control" 
+                            placeholder="Código"
+                            disabled
+                            [(ngModel)]="id"
+                        >
+                    </div>
+                    
+                    <div class="input-group mb-3">
+                        <input 
+                            type="text" 
+                            class="form-control" 
+                            placeholder="Nome da Nave" 
+                            [(ngModel)]="nome"
+                        >
+                    </div>
+                    
+                   <div class="input-group mb-3">
+                        <input 
+                            type="text"
+                            class="form-control"
+                            placeholder="Valor"
+                            [(ngModel)]="valor"
+                            (keyUp.enter)="salvarValor()"
+                            
+                        >
+                    </div>
+                    
+                    <button 
+                        class="btn btn-default" 
+                        (click)="limparInputs()"
+                    >
+                        Limpar
+                    </button>
+                    <button 
+                        class="btn btn-success"
+                        (click)="save()"
+                    >
+                        Salvar
+                    </button>
+                </div>
+            </div>
+            
+        </div>
+        <article>
+            <button 
+                class="btn btn-success"
+                [class.btnIncludeTrue]="!btnInclude"
+                [class.btnIncludeFalse]="btnInclude"
+                (click)="openSection('Incluir')"
+            >
+                [ + ]
+            </button>
+             
+            <hr>
+            
+             <div class="jumbotron">
+              <div class="container">
+                 
+                    <h5>
+                       Tabela de Naves construidas.
+                    </h5>
+                    
+                    <!--
+                    <div class="alert alert-success" role="alert">
+                        Excluido com sucesso!
+                    </div>
+                    <div class="alert alert-info" role="alert">
+                        Conteúdo ativado para edição.
+                    </div>
+                    -->    
+                    <table class="table table-striped table-dark">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Nave</th>
+                                <th scope="col">Valor</th>
+                                <th scope="col">Opções</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        
+                            <tr *ngFor="let nav of nav$;let i = index">
+                                <td>{{ nav.id }}</td>
+                                <td>{{ nav.nome }}</td>
+                                <td>{{ nav.valor | currency: 'BRL' }}</td>
+                                <td>
+                                    <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+                                        <button 
+                                            type="button"
+                                            class="btn btn-secondary"
+                                           (click)="openSection('editar')"
+                                           (click)="inputObterDados(i)"
+                                        >
+                                            Editar
+                                        </button>
+                                        <button 
+                                            type="button" 
+                                            class="btn btn-secondary"
+                                            (click)="deleteInfo(nav.id)"
+                                        >
+                                            Excluir
+                                        </button>
+                                    </div>
+                                </td>
+                                
+                                <td>{{ i }}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                   
+                 
+              </div>
+           </div>
+            
+            
+            
+            
+          <!--
+            <pre>
+                <strong><i>Debbug:</i></strong>
+                <strong>btnInclude = {{ btnInclude }}</strong>
+                <hr>
+                {{ nav$ | json }}
+                <hr>
+                {{ navees$| json }}
+            </pre>
+            -->
+        </article>
+    </section>
+ 
+    
+
+    
+    
+</div>

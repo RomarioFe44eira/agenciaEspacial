@@ -1,0 +1,65 @@
+<div class="container">
+   
+   <div class="jumbotron">
+      <div class="container">
+         
+            <h5>
+               Seja bem vindo a página da Agência espacial WRX Space
+            </h5>
+            <span>
+               Adicione, edite ou remova astronautas, naves ou missões.
+            </span>
+         
+      </div>
+   </div>
+   
+   <hr>
+   
+   
+   <div class="jumbotron">
+      <div class="container">
+         
+         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+           <ol class="carousel-indicators">
+             <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+             <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+             <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+           </ol>
+           <div class="carousel-inner">
+             <div class="carousel-item active">
+               <img class="d-block w-100" src="https://1.bp.blogspot.com/-6S6JyweYV3c/V35oGicX5WI/AAAAAAAAlCU/_H4XxFxmY2Y3ul3lPmqI9UPsyYDMKatnQCLcB/s1600/Bras%25C3%25ADlia%2BGoogle%2BMaps.jpg" alt="First slide">
+             </div>
+             <div class="carousel-item">
+               <img class="d-block w-100" src="http://3.bp.blogspot.com/-yGVkBu0ySuY/UViTJ__DjCI/AAAAAAAAQwM/ACy_cw4X1IE/s1600/localizar_satelites.jpg" alt="Second slide">
+             </div>
+             <div class="carousel-item">
+               <img class="d-block w-100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_Tuz075EqCgFNkAfNxqMGmrvje4ncOgZl0p6qJ7ohh0J69DHH" alt="Third slide">
+             </div>
+           </div>
+           <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+             <span class="sr-only">Previous</span>
+           </a>
+           <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+             <span class="carousel-control-next-icon" aria-hidden="true"></span>
+             <span class="sr-only">Next</span>
+           </a>
+         </div>
+         
+      </div>
+   </div>
+   
+   
+   <section>
+      <article>
+         <h6>Galeria de Imagens</h6>
+         <picture *ngFor="let img of linkImagens">
+            <source srcset="{{ img }}" type="image/svg+xml">
+            <img src="{{ img }}" class="img-fluid img-thumbnail" alt="...">
+         </picture>
+      </article>
+   </section>
+   
+   
+    
+</div>

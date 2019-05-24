@@ -1,0 +1,46 @@
+<div class="container">
+    <h5>Astronauta Preparado Missão!</h5>
+    <section>
+        <article *ngFor="let astronauta of astronautas">
+           
+            <span>
+                <strong>Código</strong>: {{ astronauta.id }}<br />
+                <strong>Nome</strong>: {{ astronauta.nome }}<br />
+                <strong>Pais</strong>: {{ astronauta.pais }}<br />
+                <strong>Fato Especial</strong>: {{ astronauta.FatoEspecial }}<br />
+                <strong>Status</strong>: {{ astronauta.status }}
+            </span>
+            <hr>
+            
+            <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+                <button 
+                    type="button"
+                    class="btn btn-info"
+                    [routerLink]="['editar', astronauta.id]"
+                >
+                    Editar
+                </button>
+                
+                <button 
+                    type="button"
+                    class="btn btn-danger"
+                    [routerLink]="['excluir', astronauta.id]"
+                >
+                    Excluir
+                </button>
+           
+           
+           
+            </div>
+            
+        </article>
+    </section>
+    
+    <!-- https://jsonplaceholder.typicode.com/users -->
+    
+    <!--
+        ******************************
+        Lembrar de Rodar json-server
+        ******************************
+    -->
+</div>

@@ -1,0 +1,17 @@
+<div class="container">
+    <h5>Missão Concluida!</h5>
+    
+    <section>
+        <article *ngFor="let missao of missoes">
+            
+            <span>
+                <strong>Missão:</strong> {{ missao.nome }}<br /> 
+                objetivo: {{ missao.objetivo }} <br />
+                Custo: {{ missao.custo }}<br />
+            </span>
+        </article>
+    </section>
+    
+    
+    
+</div>

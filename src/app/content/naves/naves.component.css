@@ -1,0 +1,35 @@
+hr{
+    background-color: #8c1d70;
+    height: 3px;
+}
+
+button{
+    margin: 2px;
+}
+
+.center{
+    width: 25%;
+    margin: 0 auto;
+}
+
+input{
+    width: 100%;
+}
+
+.formActive{
+    display:block;   
+}
+
+.formNoActive{
+    display:none;   
+}
+
+.btnIncludeTrue{
+    display: block;
+    margin: 8px 90%;
+}
+
+.btnIncludeFalse{
+    display: none;
+}
+

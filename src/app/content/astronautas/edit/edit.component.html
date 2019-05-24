@@ -1,0 +1,54 @@
+<div class="container">
+    <hr> 
+    <h6>Editar Astronauta</h6>
+    
+    <span>
+        <strong>ID: {{ id }}</strong>
+    </span>
+    
+    
+    <pre>
+        {{ astronautas | json }}
+    </pre>
+    
+    
+    <section>
+        <article>   
+            <label>Nome: </label>
+            <input type="text"  />
+            
+            <label>Pais: </label>
+            <input type="text"  />
+            
+            <label>FatoEspecial</label>
+            <input type="text"  />
+            
+            <label>Status</label>
+            <input type="text"   />
+            
+            <hr>
+            
+            <div class="btn-group" role="group" aria-label="Basic example">
+                <button 
+                    type="button" 
+                    class="btn btn-danger"
+                    routerLink=""
+                >
+                    Voltar
+                </button>
+            
+                <button 
+                    type="button"
+                    class="btn btn-success"
+                >
+                    Salvar
+                </button>
+            </div>
+            
+        </article>
+        
+    </section>
+    
+    
+    
+</div>
